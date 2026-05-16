@@ -17,7 +17,7 @@
 
 int main() {
     int opcao = -1;
-    float saldo = 500.00;
+    float saldo;
 
     char tipos[TAM_EXTRATO][20];
     float valores[TAM_EXTRATO];
