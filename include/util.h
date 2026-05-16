@@ -1,8 +1,8 @@
-//
-// Created by jun_u on 16/05/2026.
-//
+#ifndef UTIL_H
+#define UTIL_H
 
-#ifndef CP3_ATM_PROJETO_UTIL_H
-#define CP3_ATM_PROJETO_UTIL_H
+void limparBuffer();
+void pausarTela();
+void limparTela();
 
-#endif //CP3_ATM_PROJETO_UTIL_H
+#endif

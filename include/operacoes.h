@@ -1,8 +1,8 @@
-//
-// Created by mathe on 16/05/2026.
-//
+#ifndef OPERACOES_H
+#define OPERACOES_H
 
-#ifndef CP3_ATM_PROJETO_OPERACOES_H
-#define CP3_ATM_PROJETO_OPERACOES_H
+void consultarSaldo(float saldo);
+float realizarDeposito(float saldo, char tipos[][20], float valores[], int *totalOperacoes);
+float realizarSaque(float saldo, char tipos[][20], float valores[], int *totalOperacoes);
 
-#endif //CP3_ATM_PROJETO_OPERACOES_H
+#endif
