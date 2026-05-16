@@ -2,11 +2,7 @@
 #include "../include/extrato.h"
 #include "../include/util.h"
 
-/*
-    Arquivo responsavel pelo registro e exibicao do extrato.
-    O sistema guarda apenas as ultimas 3 operacoes.
-*/
-
+/* Copia uma string para outra */
 void copiarTexto(char destino[], char origem[]) {
     int i = 0;
 
@@ -18,6 +14,7 @@ void copiarTexto(char destino[], char origem[]) {
     destino[i] = '\0';
 }
 
+/* Registra uma nova operacao no extrato */
 void registrarOperacao(char tipos[][20], float valores[], int *totalOperacoes, char tipo[], float valor) {
     int i;
 
@@ -26,6 +23,7 @@ void registrarOperacao(char tipos[][20], float valores[], int *totalOperacoes, c
         valores[*totalOperacoes] = valor;
         (*totalOperacoes)++;
     } else {
+        /* Se o extrato estiver cheio, remove a operacao mais antiga */
         for (i = 0; i < TAM_EXTRATO - 1; i++) {
             copiarTexto(tipos[i], tipos[i + 1]);
             valores[i] = valores[i + 1];
@@ -36,11 +34,12 @@ void registrarOperacao(char tipos[][20], float valores[], int *totalOperacoes, c
     }
 }
 
+/* Exibe todas as operacoes registradas */
 void mostrarExtrato(char tipos[][20], float valores[], int totalOperacoes, float saldo) {
     int i;
 
     printf("\n------------- EXTRATO ---------------\n");
-
+    /* Verifica se existem operacoes registradas */
     if (totalOperacoes == 0) {
         printf("Nenhuma operacao realizada ainda.\n");
     } else {
