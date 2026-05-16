@@ -2,14 +2,16 @@
 #include "../include/operacoes.h"
 #include "../include/extrato.h"
 #include "../include/util.h"
-
+// Define o limite máximo permitido para cada saque
 #define LIMITE_SAQUE 1000.00
 
+// Função responsável por mostrar o saldo atual da conta
 void consultarSaldo(float saldo) {
     printf("\nSaldo atual: R$ %.2f\n", saldo);
     pausarTela();
 }
 
+// Função responsável por realizar um depósito
 float realizarDeposito(float saldo, char tipos[][20], float valores[], int *totalOperacoes) {
     float valor;
 
@@ -40,7 +42,7 @@ float realizarDeposito(float saldo, char tipos[][20], float valores[], int *tota
     pausarTela();
     return saldo;
 }
-
+// Função responsável por realizar um saque
 float realizarSaque(float saldo, char tipos[][20], float valores[], int *totalOperacoes) {
     float valor;
 
