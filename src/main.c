@@ -17,12 +17,12 @@
 
 int main() {
     int opcao = -1;
-    float saldo;
+    float saldo = 0.0;
 
     char tipos[TAM_EXTRATO][20];
     float valores[TAM_EXTRATO];
     int totalOperacoes = 0;
-
+    // Laço principal do sistema, que continua executando até o usuário escolher sair
     do {
         limparTela();
         exibirMenu();
@@ -35,7 +35,7 @@ int main() {
         }
 
         limparBuffer();
-
+        // Verifica qual opção o usuário escolheu
         switch (opcao) {
             case 1:
                 consultarSaldo(saldo);
