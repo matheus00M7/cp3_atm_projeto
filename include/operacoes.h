@@ -1,0 +1,8 @@
+//
+// Created by mathe on 16/05/2026.
+//
+
+#ifndef CP3_ATM_PROJETO_OPERACOES_H
+#define CP3_ATM_PROJETO_OPERACOES_H
+
+#endif //CP3_ATM_PROJETO_OPERACOES_H
